@@ -5,12 +5,78 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <head>
         <title>TODO supply a title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <h:form>
+             <div align="center">
+                <font style="color:rgb(255,0,0);">             
+                <h1 align="center">Validacion con ANOTACIONES</h1>
+                <hr></hr> 
+                </font>
+                <br></br>
+                <br></br>
+                <font style="color:rgb(24,127,194);">
+                <h:outputText value="Campo Vacio: "/>
+                </font>
+                <h:inputText /> 
+                <br></br>
+                <br></br>
+                <font style="color:rgb(24,127,194);">
+                <h:outputText value="Digite minimo 5 Caraceres: "/>
+                </font>
+                <h:inputText />
+                <br></br>
+                <br></br>
+                <font style="color:rgb(24,127,194);">
+                <h:outputText value="Digite Correo Electronico: "/>
+                </font>
+                <h:inputText/>
+                <br></br>
+                <br></br>
+                <font style="color:rgb(24,127,194);">
+                <h:outputText value="Digite Numero Mayor a 18: "/>
+                </font>
+                <h:inputText/>
+                <br></br>
+                <br></br>
+                <font style="color:rgb(24,127,194);">
+                <h:outputText value="Digite Numero entero: "/>
+                </font>
+                <h:inputText />
+                <br></br>
+                <br></br>
+                <font style="color:rgb(24,127,194);">
+                <h:outputText value="Digite numero Flotante: "/>
+                </font>
+                <h:inputText  />
+                <br></br>
+                <br></br>
+                <font style="color:rgb(24,127,194);">
+                <h:outputText value="Digite Fecha: "/>
+                </font>
+                <h:inputText />
+                <br></br>
+                <br></br>
+                <font style="color:rgb(24,127,194);">
+                <h:outputText value="Digite Moneda: "/>
+                </font>
+                <h:inputText />
+                <br></br>
+                <br></br>
+                <font style="color:rgb(24,127,194);">
+                <h:outputText value="Tamaño minimo 5 Caraceres: "/>
+                </font>
+                <h:inputText />
+                <br></br>
+                <br></br>
+                <h:commandButton value="Validar" action="validacionVista" />
+             </div>
+        </h:form>
     </body>
 </html>
