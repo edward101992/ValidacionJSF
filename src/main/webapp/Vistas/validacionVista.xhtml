@@ -34,9 +34,13 @@ and open the template in the editor.
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
-                <h:outputText value="Digite Correo Electronico: "/>
+                <h:outputLabel for="correo" value="Correo"/>
+                <h:inputText id="email"  required="true" label="Email" validatorMessage="E-mail incorreto">
+                <f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+                </h:inputText>
+                <h:message for="email" style="color:rgb(226, 72, 23); " />
                 </font>
-                <h:inputText required="true" requiredMessage="Debe Insertar un valor"/>
+                
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
