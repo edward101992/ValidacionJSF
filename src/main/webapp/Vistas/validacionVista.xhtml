@@ -32,7 +32,6 @@ and open the template in the editor.
                 <h:outputText value="Digite minimo 5 Caraceres: "/>
                 </font>
                 <h:inputText id="min" required="true" requiredMessage="Debe Insertar un valor minimo 5 caracteres">
-                   
                     <f:validateLength minimum="5"/>
                 </h:inputText>
                  <h:message for="min" style="color:rgb(226, 72, 23); " />
@@ -51,7 +50,10 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Numero Mayor a 18: "/>
                 </font>
-                <h:inputText required="true" requiredMessage="Debe Insertar un valor"/>
+                <h:inputText id="mayor" required="true" requiredMessage="Debe Insertar un valor mayor a 18">
+                    <f:validateLongRange minimum="18" />
+                </h:inputText>
+                 <h:message for="mayor" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
