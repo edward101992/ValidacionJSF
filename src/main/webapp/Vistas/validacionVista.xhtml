@@ -68,25 +68,38 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite numero Flotante: "/>
                 </font>
-                <h:inputText required="true" requiredMessage="Debe Insertar un valor"/>
+                <h:inputText converter="#{Float}" id="numFlotante" required="true" requiredMessage="Debe Insertar un valor de numero Flotante">
+               
+                </h:inputText>
+                <h:message for="numFlotante" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Fecha: "/>
                 </font>
-                <h:inputText required="true" requiredMessage="Debe Insertar un valor"/>
+                <h:inputText id="fecha" required="true" requiredMessage="Debe Insertar una fecha correcta">
+                <f:convertDateTime pattern="MM/dd/yyyy" dateStyle="default"/>
+                    
+                </h:inputText>
+                <h:message for="fecha" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Moneda: "/>
                 </font>
-                <h:inputText required="true" requiredMessage="Debe Insertar un valor"/>
+                <h:inputText id="moneda" required="true" requiredMessage="Debe Insertar un valor correcto de modena">
+                    
+                </h:inputText>
+                <h:message for="moneda" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
-                <h:outputText value="Tamaño minimo 5 Caraceres: "/>
+                <h:outputText value="Tamaño máximo 10 Caraceres: "/>
                 </font>
-                <h:inputText required="true" requiredMessage="Debe Insertar un valor"/>
+                <h:inputText id="maximo" required="true" requiredMessage="Debe Insertar un de 10 caracteres">
+                    <f:validateLength maximum="10" />
+                </h:inputText>
+                <h:message for="maximo" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <h:commandButton value="Validar" action="validacionAnotacion" />
