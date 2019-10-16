@@ -30,9 +30,12 @@ and open the template in the editor.
                 <br></br>
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite minimo 5 Caraceres: "/>
-                
                 </font>
-                <h:inputText required="true" requiredMessage="Debe Insertar un valor"/>
+                <h:inputText id="min" required="true" requiredMessage="Debe Insertar un valor minimo 5 caracteres">
+                   
+                    <f:validateLength minimum="5"/>
+                </h:inputText>
+                 <h:message for="min" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
