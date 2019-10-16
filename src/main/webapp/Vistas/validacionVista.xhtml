@@ -24,7 +24,9 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Campo Vacio: "/>
                 </font>
-                <h:inputText id="vacio" required="true" requiredMessage="Debe Insertar un valor"/> 
+                <h:inputText    id="vacio" required="true" requiredMessage="Debe Insertar un valor"> 
+                
+                </h:inputText>
                 <h:message for="vacio" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
@@ -87,8 +89,8 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Moneda: "/>
                 </font>
-                <h:inputText id="moneda" required="true" requiredMessage="Debe Insertar un valor correcto de modena">
-                    
+                <h:inputText  id="moneda" required="true" requiredMessage="Debe Insertar un valor correcto de modena">
+                
                 </h:inputText>
                 <h:message for="moneda" style="color:rgb(226, 72, 23); " />
                 <br></br>
@@ -104,6 +106,8 @@ and open the template in the editor.
                 <br></br>
                 <h:commandButton value="Validar" action="validacionAnotacion" />
              </div>
+            
+            
         </h:form>
     </h:body>
 </html>
