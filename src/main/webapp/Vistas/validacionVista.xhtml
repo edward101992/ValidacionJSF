@@ -59,7 +59,10 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Numero entero: "/>
                 </font>
-                <h:inputText required="true" requiredMessage="Debe Insertar un valor"/>
+                <h:inputText id="entero" converter="#{int}" required="true" requiredMessage="Debe Insertar un valor entero">
+                <f:validateLongRange minimum="-2147483648" maximum="2147483647"/>
+                </h:inputText>   
+                <h:message for="entero" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
