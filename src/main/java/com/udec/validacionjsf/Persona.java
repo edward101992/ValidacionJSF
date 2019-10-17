@@ -53,7 +53,7 @@ public class Persona implements Serializable{
     @Size(min=1, max=10, message = "* Maximo 10 caracteres")
     private String maximo;
     
-    @Pattern(regexp = "/?[0-9]+/?[0-9]+/?[0-9]+" ,message = "* Fecha invalida") 
+    @Pattern(regexp = "[0-9]+/[0-9]+/[0-9]+" ,message = "* Fecha invalida") 
     private String fecha2;
     
     /**
