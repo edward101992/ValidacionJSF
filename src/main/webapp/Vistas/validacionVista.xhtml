@@ -80,7 +80,7 @@ and open the template in the editor.
                 <h:outputText value="Digite Fecha: "/>
                 </font>
                 <h:inputText id="fecha" required="true" requiredMessage="Debe Insertar una fecha correcta" label="*">
-                <f:convertDateTime pattern="MM/dd/yyyy" dateStyle="default"/>
+                <f:convertDateTime pattern="MM/dd/yyyy" dateStyle="type"/>
                     
                 </h:inputText>
                 <h:message for="fecha" style="color:rgb(226, 72, 23); " />
@@ -90,7 +90,7 @@ and open the template in the editor.
                 <h:outputText value="Digite Moneda: "/>
                 </font>
                 <h:inputText  id="moneda" required="true" requiredMessage="Debe Insertar un valor correcto de modena" label="*">
-                    <f:validateRegex id="pesos" pattern="\$?\€?[0-9]*"/>              
+                    <f:validateRegex id="pesos" pattern="\$+[0-9.]*|€+[0-9.]*|฿+[0-9.]*|₣+[0-9.]*|Br+[0-9.]*|₡+[0-9.]*|kr+[0-9.]*"/>              
                 </h:inputText>
                 <h:message for="moneda" style="color:rgb(226, 72, 23); " />
                 <br></br>
