@@ -24,7 +24,7 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Campo Vacio: "/>
                 </font>
-                <h:inputText    id="vacio" required="true" requiredMessage="Debe Insertar un valor"> 
+                <h:inputText    id="vacio" required="true" requiredMessage="Debe Insertar un valor" label="*"> 
                 
                 </h:inputText>
                 <h:message for="vacio" style="color:rgb(226, 72, 23); " />
@@ -33,15 +33,15 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite minimo 5 Caraceres: "/>
                 </font>
-                <h:inputText id="min" required="true" requiredMessage="Debe Insertar un valor minimo 5 caracteres">
+                <h:inputText id="min" required="true" requiredMessage="Debe Insertar un valor minimo 5 caracteres" label="*">
                     <f:validateLength minimum="5"/>
                 </h:inputText>
                  <h:message for="min" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
-                <h:outputLabel for="correo" value="Correo"/>
-                <h:inputText id="email"  required="true" label="Email" validatorMessage="E-mail incorreto">
+                <h:outputLabel for="correo" value="Digite un Correo :"/>
+                <h:inputText id="email"  required="true" validatorMessage="E-mail incorreto" label="*">
                 <f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
                 </h:inputText>
                 <h:message for="email" style="color:rgb(226, 72, 23); " />
@@ -52,7 +52,7 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Numero Mayor a 18: "/>
                 </font>
-                <h:inputText id="mayor" required="true" requiredMessage="Debe Insertar un valor mayor a 18">
+                <h:inputText id="mayor" required="true" requiredMessage="Debe Insertar un valor mayor a 18" label="*">
                     <f:validateLongRange minimum="18" />
                 </h:inputText>
                  <h:message for="mayor" style="color:rgb(226, 72, 23); " />
@@ -61,7 +61,7 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Numero entero: "/>
                 </font>
-                <h:inputText id="entero" converter="#{int}" required="true" requiredMessage="Debe Insertar un valor entero">
+                <h:inputText id="entero" converter="#{int}" required="true" requiredMessage="Debe Insertar un valor entero" label="*">
                 <f:validateLongRange minimum="-2147483648" maximum="2147483647"/>
                 </h:inputText>   
                 <h:message for="entero" style="color:rgb(226, 72, 23); " />
@@ -70,7 +70,7 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite numero Flotante: "/>
                 </font>
-                <h:inputText converter="#{Float}" id="numFlotante" required="true" requiredMessage="Debe Insertar un valor de numero Flotante">
+                <h:inputText converter="#{Float}" id="numFlotante" required="true" requiredMessage="Debe Insertar un valor de numero Flotante" label="*">
                
                 </h:inputText>
                 <h:message for="numFlotante" style="color:rgb(226, 72, 23); " />
@@ -79,7 +79,7 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Fecha: "/>
                 </font>
-                <h:inputText id="fecha" required="true" requiredMessage="Debe Insertar una fecha correcta">
+                <h:inputText id="fecha" required="true" requiredMessage="Debe Insertar una fecha correcta" label="*">
                 <f:convertDateTime pattern="MM/dd/yyyy" dateStyle="default"/>
                     
                 </h:inputText>
@@ -89,19 +89,16 @@ and open the template in the editor.
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Moneda: "/>
                 </font>
-                <h:inputText  id="moneda" required="true" requiredMessage="Debe Insertar un valor correcto de modena">
-                    <f:validateRegex id="pesos" pattern="\$?\€?[0-9]*"/>
-                   
+                <h:inputText  id="moneda" required="true" requiredMessage="Debe Insertar un valor correcto de modena" label="*">
+                    <f:validateRegex id="pesos" pattern="\$?\€?[0-9]*"/>              
                 </h:inputText>
                 <h:message for="moneda" style="color:rgb(226, 72, 23); " />
-                <h:outputText  value="moneda"/>
-                
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Tamaño máximo 10 Caraceres: "/>
                 </font>
-                <h:inputText id="maximo" required="true" requiredMessage="Debe Insertar un valor máximo de 10 caracteres">
+                <h:inputText id="maximo" required="true" requiredMessage="Debe Insertar un valor máximo de 10 caracteres" label="*">
                     <f:validateLength maximum="10" />
                 </h:inputText>
                 <h:message for="maximo" style="color:rgb(226, 72, 23); " />
