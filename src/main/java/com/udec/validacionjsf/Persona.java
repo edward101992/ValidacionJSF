@@ -18,8 +18,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 /**
- *
- * @author SuperUs
+ *@author victor preciado
+ * @author Edward Ramos
  */
 @Named(value = "persona")
 @Dependent
