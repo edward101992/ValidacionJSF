@@ -22,57 +22,76 @@ and open the template in the editor.
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
-                <h:outputText value="Campo Vacio: "  />
+                <h:outputText value="Campo Vacio: "/>
                 </font>
-                <h:inputText /> 
+                <h:inputText id="txtNombre" value="#{persona.nombre}"> 
+                </h:inputText>
+                <h:message for="txtNombre" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite minimo 5 Caraceres: "/>
                 </font>
-                <h:inputText />
+                <h:inputText id="txtMinimo" value="#{persona.minimo}">
+                </h:inputText>
+                 <h:message for="txtMinimo" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Correo Electronico: "/>
                 </font>
-                <h:inputText/>
+                <h:inputText id="txtCorreo" value="#{persona.email}">
+                    </h:inputText>
+                <h:message for="txtCorreo" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Numero Mayor a 18: "/>
+                    
                 </font>
-                <h:inputText/>
+                <h:inputText id="txtMayor" value="#{persona.mayor}">
+                    </h:inputText>
+                <h:message for="txtMayor" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
-                <h:outputText value="Digite Numero entero: "/>
+                <h:outputText value="Digite Numero entero: "/>                   
                 </font>
-                <h:inputText />
+                <h:inputText id="txtEntero" value="#{persona.entero}">
+                    </h:inputText>
+                <h:message for="txtEntero" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite numero Flotante: "/>
                 </font>
-                <h:inputText  />
+                <h:inputText id="txtFlotante" value="#{persona.flotante}">
+                    </h:inputText>
+                <h:message for="txtFlotante" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
                 <h:outputText value="Digite Fecha: "/>
                 </font>
-                <h:inputText />
+                <h:inputText id="txtFecha" value="#{persona.fecha}">
+                    </h:inputText>
+                <h:message for="txtFecha" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
-                <h:outputText value="Digite Moneda: "/>
+                <h:outputText value="Digite Moneda ($ - €): "/>
                 </font>
-                <h:inputText />
+                <h:inputText id="txtMoneda" value="#{persona.moneda}">
+                    </h:inputText>
+                <h:message for="txtMoneda" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <font style="color:rgb(24,127,194);">
-                <h:outputText value="Tamaño minimo 5 Caraceres: "/>
+                <h:outputText value="Tamaño maximo 10 Caraceres: "/>
                 </font>
-                <h:inputText />
+                <h:inputText id="txtMaximo" value="#{persona.maximo}">
+                    </h:inputText>
+                <h:message for="txtMaximo" style="color:rgb(226, 72, 23); " />
                 <br></br>
                 <br></br>
                 <h:commandButton value="Validar" action="validacionVista" />
