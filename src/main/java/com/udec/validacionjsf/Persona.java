@@ -44,8 +44,8 @@ public class Persona implements Serializable{
     @Digits(integer=10, fraction=2, message = "* Solo numeros Enteros")
     private double flotante;
     
-//  @Pattern(regexp="MM/dd/yyyy")
-    private Date fecha;
+    @Pattern(regexp = "^(?:0?[1-9]|1[1-2])([\\-/.])(3[01]|[12][0-9]|0?[1-9])\\1\\d{4}$", message ="fecha invalida")
+    private String fecha;
     
     @Pattern(regexp = "\\$?\\€?[0-9]+" ,message = "* Moneda no valida")
     private String moneda;
@@ -68,7 +68,7 @@ public class Persona implements Serializable{
      * @param moneda Variable la cual valida que el campo sea tipo moneda Euro o Peso
      * @param maximo Variable la cual valida que halla menos de 10 caracteres
      */
-    public Persona(String nombre, String minimo, String email, int mayor, int entero, double flotante, Date fecha, String moneda, String maximo) {
+    public Persona(String nombre, String minimo, String email, int mayor, int entero, double flotante, String fecha, String moneda, String maximo) {
         this.nombre = nombre;
         this.minimo = minimo;
         this.email = email;
@@ -180,7 +180,7 @@ public class Persona implements Serializable{
      * get variable fecha
      * @return 
      */
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
     
@@ -188,7 +188,7 @@ public class Persona implements Serializable{
      * set variable fecha
      * @param fecha 
      */
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
     
